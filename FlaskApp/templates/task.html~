@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Поле загрузки файлов, которое мы заслужили</title>
+     <link rel="stylesheet" href='/static/style.css'>
+     <script type="text/javascript" src="/static/jquery-3.3.1.min.js"></script>
+     <script type="text/javascript" src="/static/script.js"></script>
+</head>
+<body>
+{%for i in obj%}
+<p>{{i}}</p>
+{%endfor%}
+	<form id="upload-container" method="POST" action="/newtask" enctype="multipart/form-data">
+		<img id="upload-image" src="https://habrastorage.org/webt/dr/qg/cs/drqgcsoh1mosho2swyk3kk_mtwi.png">
+		<div>
+			<input id="file-input" type="file" name="file" multiple>
+			<label for="file-input">Выберите файл</label>
+			<span>или перетащите его сюда</span>
+		</div>
+        <button type="submit" >Отправить</button>
+	</form>
+
+</body>
+</html>
